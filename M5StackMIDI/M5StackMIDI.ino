@@ -121,7 +121,7 @@ void loop() {
   if (M5.BtnB.wasPressed()) {
     // note down
     midiPacket[2] = 0x90; // note down, channel 0
-    midiPacket[3] = 0x3D; //
+    midiPacket[3] = 0x3F; //
     midiPacket[4] = 127;  // velocity
     pCharacteristic->setValue(midiPacket, 5); // packet, length in bytes
     pCharacteristic->notify();
@@ -130,7 +130,7 @@ void loop() {
   if (M5.BtnB.wasReleased()) {
     // note up
     midiPacket[2] = 0x80; // note up, channel 0
-    midiPacket[3] = 0x3D; //
+    midiPacket[3] = 0x3F; //
     midiPacket[4] = 0;    // velocity
     pCharacteristic->setValue(midiPacket, 5); // packet, length in bytes)
     pCharacteristic->notify();
@@ -139,7 +139,7 @@ void loop() {
   if (M5.BtnC.wasPressed()) {
     // note down
     midiPacket[2] = 0x90; // note down, channel 0
-    midiPacket[3] = 0x3E; //
+    midiPacket[3] = 0x43; //
     midiPacket[4] = 127;  // velocity
     pCharacteristic->setValue(midiPacket, 5); // packet, length in bytes
     pCharacteristic->notify();
@@ -148,7 +148,7 @@ void loop() {
   if (M5.BtnC.wasReleased()) {
     // note up
     midiPacket[2] = 0x80; // note up, channel 0
-    midiPacket[3] = 0x3E; //
+    midiPacket[3] = 0x43; //
     midiPacket[4] = 0;    // velocity
     pCharacteristic->setValue(midiPacket, 5); // packet, length in bytes)
     pCharacteristic->notify();
